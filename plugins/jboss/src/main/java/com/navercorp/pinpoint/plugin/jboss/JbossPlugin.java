@@ -85,6 +85,7 @@ public class JbossPlugin implements ProfilerPlugin, TransformTemplateAware {
         // Instrumenting class on the base of ejb based application or rest based application.
         if (jbossConfig.isJbossTraceEjb()) {
             addMethodInvocationMessageHandlerEditor();
+            addContextInvocationEditor();
         } else {
             addStandardHostValveEditor();
             addContextInvocationEditor();
